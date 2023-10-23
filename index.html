@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Проект</title>
+        <style>
+          @media screen and (max-width: 1030px){
+             main .cards-container{
+              grid-template-columns: repeat(2, 1fr);
+            }
+          }
+          @media screen and (max-width: 768px){
+            .cards-container{
+              grid-template-columns: repeat(1, 1fr) !important;
+            }
+            #header-buttons{
+              display: none;
+            }
+            #menu{
+              display: flex !important;
+              flex-direction: column;
+              margin-right: 20px;
+            }
+            #menu a{
+              visibility: hidden;
+              border: black 1px solid;
+              border-radius:  10px;
+            }
+            #menu:hover a{
+              visibility: visible;
+            }
+            header div{
+              display: flex;
+            }
+          }
+          body{
+              background-color:#F8F8F8;
+          }
+          header{
+            display: flex;
+            justify-content: space-between;
+          }
+          h3 a{
+            padding-left: 18px;
+          }
+          #login{
+            background-color: rgb(47, 47, 255);
+            width: 80px;
+            height: 35px;
+            color: #F8F8F8;
+            text-align: center;
+            padding-top: 10px;
+            border-radius: 10px;
+          }
+          .card{
+            display: flex;
+            flex-direction: column;
+            font-size: 16px;
+            margin-left: 40px;
+            margin-top: 20px;
+            border: grey 1px solid;
+            border-radius: 10px;
+            width: 300px;
+            transition-duration: 0.8s;
+          }
+          .card:hover{
+            box-shadow: 0 0 20px black; 
+          }
+          .card img{
+            border-radius: 10px;
+            width: 300px;
+            height: 240px;
+          }
+          p{
+            color: grey;
+            margin: 0 auto;
+            letter-spacing: 0.4px;
+            font-size: 16px;
+            line-height: 26px;
+          }
+          article{
+            width: 100%;
+            margin: 0 auto;
+          }
+          .card input{
+            width: 100%;
+            height: 30px;
+            background-color: blue;
+            color: white;
+            border-radius: 0px 0px 10px 10px;
+          }
+          h2{
+            font-size: 20px;
+            margin: 0 auto;
+            letter-spacing: 0.2px;
+            line-height: 30px;
+          }
+          .cards-container{
+            margin-top: 80px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            justify-items: center;
+          }
+          #menu{
+            display: none;
+          }
+          #menu h3{
+            background-color: rgb(211, 211, 211);
+            text-align: center;
+            padding-top: 10px;
+            border-radius: 10px;
+            width: 80px;
+            height: 75px;
+            border: black 1px solid;
+            margin-bottom: 0px;
+          }
+          #menu{
+            width: 80px;
+            height: 35px;
+            border-radius:10px;
+            text-align: center;
+            line-height: 35px;
+            text-decoration: none;
+            color: black;
+            
+          }
+          a{
+            text-decoration: none;
+            color: black;
+          }
+        </style>
+    </head>
+    <body>
+      <header>
+        <img src="./img/project-logo-black.svg" width="80" height="40" alt="icon">
+        <h3 id="header-buttons">
+          <a href="#">Main page</a>
+          <a href="#">Catalog</a>
+          <a href="#">About us</a>
+        </h3>
+        <div>
+          <div id="menu">
+            <h3>Menu</h3>
+            <a href="#">Main page</a>
+            <a href="#">Catalog</a>
+            <a href="#">About us</a>
+          </div>
+          <h3 id="login">Login</h3>
+        </div>
+      </header>
+      <main>
+        <section class="cards-container">
+          <div class="card">
+            <img src="./img/we_build.jpg">
+            <h2>Встановимо вікна будь-де!</h2>
+            <p>Вікна під будь-яку раму</p>
+            <p>Найкращі ціни по Україні</p>
+            <input  type="submit" value="Перейти до каталогу" />
+          </div>
+          <div class="card">
+            <img src="./img/we_manage.jpg">
+            <h2>Ми найкащі на ринку України</h2>
+            <p>Найоперативніший сервіс</p>
+            <p>Найшивдше встановлення</p>
+            <input type="submit" value="Про нас">
+          </div>
+          <div class="card">
+            <img src="./img/we_plan.jpg">
+            <h2>Найкраще планування</h2>
+            <p>Якісне встановлення</p>
+            <p>Гарантія 8 років</p>
+            <input type="submit" value="До відгуків">
+          </div>
+          <div class="card">
+            <img src="./img/house.jpg">
+            <h2>Найкраще планування</h2>
+            <p>Ціна/якість №1</p>
+            <p>12 років досвіду</p>
+            <input type="submit" value="Наше портфоліо">
+          </div>
+        </section>
+      </main>
+    </body>
+</html>
